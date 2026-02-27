@@ -1,1 +1,76 @@
 
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <title>İletişim | Taha</title>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">Ana Sayfa</a> |
+        <a href="about.html">Hakkımda</a> |
+        <a href="hobbies.html">İlgi Alanlarım</a> |
+        <a href="contact.html">İletişim</a>
+    </nav>
+
+    <hr>
+
+    <main>
+        <h1>İletişim</h1>
+        <p>Benimle iletişime geçmek için aşağıdaki formu doldurabilir veya doğrudan e-posta gönderebilirsiniz.</p>
+
+        <form action="#" method="post">
+            <fieldset>
+                <legend>İletişim Formu</legend>
+                
+                <p>
+                    <label for="ad">Ad Soyad:</label><br>
+                    <input type="text" id="ad" name="user_name" placeholder="Adınızı giriniz" required>
+                </p>
+
+                <p>
+                    <label for="email">E-posta Adresi:</label><br>
+                    <input type="email" id="email" name="user_email" placeholder="ornek@mail.com" required>
+                </p>
+
+                <p>
+                    <label for="konu">Konu:</label><br>
+                    <select id="konu" name="subject">
+                        <option value="genel">Genel Sorular</option>
+                        <option value="is">İş Birliği / Proje</option>
+                        <option value="akademik">Akademik / NLP</option>
+                        <option value="diger">Diğer</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="mesaj">Mesajınız:</label><br>
+                    <textarea id="mesaj" name="user_message" rows="5" cols="30" placeholder="Mesajınızı buraya yazın..."></textarea>
+                </p>
+
+                <button type="submit">Gönder</button>
+                <button type="reset">Temizle</button>
+            </fieldset>
+        </form>
+
+        <br>
+
+        <section>
+            <h3>Diğer Kanallar</h3>
+            <ul>
+                <li><strong>E-posta:</strong> <a href="mailto:taha@example.com">taha@example.com</a></li>
+                <li><strong>Konum:</strong> Türkiye</li>
+                <li><strong>Sosyal Medya:</strong> <a href="https://linkedin.com" target="_blank">LinkedIn</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <hr>
+
+    <footer>
+        <p>&copy; 2026 Taha - Tüm Hakları Saklıdır.</p>
+    </footer>
+
+</body>
+</html>
