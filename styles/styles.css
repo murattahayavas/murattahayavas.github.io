@@ -1,87 +1,66 @@
+/* Grup Seçici [cite: 22] */
 h1, h2, p {
-    font-family: 'Segoe UI', Arial, sans-serif;
-    margin-bottom: 10px;
-} 
+    font-family: Arial, sans-serif;
+}
 
-/* Navigasyon Alanı */
+/* Navigasyon: Yatay Menü Yapısı [cite: 16] */
 nav {
     background-color: #333;
-    padding: 15px;
+    padding: 10px;
     text-align: center;
 }
 
 nav ul {
-    list-style: none;
+    list-style-type: none;
     padding: 0;
-    margin: 0;
 }
 
-/* Menüyü yatay yapmak için inline-block kullanımı */
 nav ul li {
-    display: inline-block; 
-    margin: 0 15px;
+    display: inline-block; /* Menüyü yatay yapar [cite: 16] */
+    margin-right: 20px;
 }
 
-/* 2. Hiyerarşik Seçici: Nav içindeki linkleri hedefler */
+/* Hiyerarşik Seçici 1 [cite: 22] */
 nav ul li a {
     color: white;
     text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
-} 
+    transition: 0.3s;
+}
 
-/* Hover Efekti (Renk Değişimi) */
 nav ul li a:hover {
-    color: #ff9900; 
+    color: #ff9900; /* Basit hover efekti [cite: 17] */
 }
 
-/* Üst Başlık (Header) */
-header {
-    background-color: #f4f4f4;
-    padding: 30px;
-    text-align: center;
-    border-bottom: 2px solid #ddd;
-}
-
-/* Ana Konteyner */
+/* Düzen Ayarları [cite: 19] */
 .container {
     width: 90%;
     margin: 20px auto;
 }
 
-/* Sütunları yan yana getirme */
-.content, .sidebar {
-    display: inline-block; 
-    vertical-align: top;
-    box-sizing: border-box;
-    padding: 20px;
-}
-
-/* Sol İçerik Alanı */
 .content {
+    display: inline-block;
     width: 60%;
+    vertical-align: top;
 }
 
-/* Sağ Yan Menü */
 .sidebar {
+    display: inline-block;
     width: 35%;
-    background-color: #e9e9e9;
-    border-radius: 5px;
+    background-color: #f4f4f4;
+    padding: 15px;
+    box-sizing: border-box;
+    vertical-align: top;
 }
 
-/* 3. Hiyerarşik Seçici: Content içindeki paragraflar */
+/* Hiyerarşik Seçici 2: Metin Düzenleme [cite: 20, 22] */
 .content p {
-    font-size: 16px;       /* Özellik 1 */ 
-    color: #444;           /* Özellik 2 */ 
-    line-height: 1.6;      /* Özellik 3 */ 
-    text-align: justify;   
-} 
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
 
-/* Alt Bilgi (Footer) */
 footer {
-    background-color: #333;
-    color: white;
     text-align: center;
-    padding: 15px;
-    margin-top: 30px;
-} 
+    padding: 20px;
+    border-top: 1px solid #ccc;
+}
