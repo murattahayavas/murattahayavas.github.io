@@ -1,37 +1,44 @@
-/* Grup Seçici [cite: 22] */
+/* Grup Seçici */
 h1, h2, p {
     font-family: Arial, sans-serif;
 }
 
-/* Navigasyon: Yatay Menü Yapısı [cite: 16] */
+/* --- YENİLENMİŞ NAVBAR (BOX MODEL & MODERN TASARIM) --- */
 nav {
-    background-color: #333;
-    padding: 10px;
+    background-color: #2c3e50; /* Form butonuyla uyumlu modern koyu renk */
+    padding: 15px 0;
     text-align: center;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 nav ul {
     list-style-type: none;
     padding: 0;
+    margin: 0;
 }
 
 nav ul li {
-    display: inline-block; /* Menüyü yatay yapar [cite: 16] */
-    margin-right: 20px;
+    display: inline-block;
+    margin: 0 5px;
 }
 
-/* Hiyerarşik Seçici 1 [cite: 22] */
 nav ul li a {
     color: white;
     text-decoration: none;
-    transition: 0.3s;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
 }
 
 nav ul li a:hover {
-    color: #ff9900; /* Basit hover efekti [cite: 17] */
+    background-color: #34495e;
+    color: #2ecc71; /* Vurgu rengi */
 }
+/* ---------------------------------------------------- */
 
-/* Düzen Ayarları [cite: 19] */
+/* Düzen Ayarları */
 .container {
     width: 90%;
     margin: 20px auto;
@@ -52,7 +59,7 @@ nav ul li a:hover {
     vertical-align: top;
 }
 
-/* Hiyerarşik Seçici 2: Metin Düzenleme [cite: 20, 22] */
+/* Hiyerarşik Seçici 2: Metin Düzenleme */
 .content p {
     font-size: 16px;
     line-height: 1.6;
