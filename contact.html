@@ -1,9 +1,79 @@
-
 <!DOCTYPE html>
 <html lang="tr">
 <head>
     <meta charset="UTF-8">
     <title>İletişim | Taha</title>
+    <style>
+        /* CSS BOX MODEL STİLİ KORUNDU */
+        
+        .contact-container {
+            width: 600px;
+            margin: 40px auto;
+            padding: 25px;
+            border: 1px solid #ccc;
+            border-radius: 8px;
+            font-family: Arial, sans-serif;
+            background-color: #ffffff;
+        }
+
+        /* Input, Select, Textarea ve Password alanları için ortak stil */
+        .contact-container input[type="text"], 
+        .contact-container input[type="email"], 
+        .contact-container input[type="password"],
+        .contact-container input[type="file"],
+        .contact-container select, 
+        .contact-container textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .contact-container label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        /* Checkbox Grubu Düzenlemesi */
+        .checkbox-group {
+            margin-bottom: 15px;
+            padding: 10px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 5px;
+            font-weight: normal; /* Checkbox metinleri kalın olmasın */
+        }
+
+        .checkbox-item input {
+            width: auto !important; /* Genişlik kuralını geçersiz kıl */
+            margin-right: 10px;
+            margin-bottom: 0; /* Alttaki boşluğu sıfırla */
+        }
+
+        /* Gönder Butonu */
+        .contact-container button[type="submit"] {
+            background-color: #2c3e50;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%; /* Butonu tam genişlik yaparak formu dengeledik */
+        }
+
+        .contact-container button[type="submit"]:hover {
+            background-color: #34495e;
+        }
+    </style>
 </head>
 <body>
 
@@ -17,58 +87,62 @@
     <hr>
 
     <main>
-        <h1>İletişim</h1>
-        <p>Benimle iletişime geçmek için aşağıdaki formu doldurabilir veya doğrudan e-posta gönderebilirsiniz.</p>
+        <h1 style="text-align:center;">İletişim ve Başvuru Formu</h1>
 
-        <form action="#" method="post">
-            <fieldset>
-                <legend>İletişim Formu</legend>
+        <div class="contact-container">
+            <form action="#" method="post">
                 
-                <p>
-                    <label for="ad">Ad Soyad:</label><br>
-                    <input type="text" id="ad" name="user_name" placeholder="Adınızı giriniz" required>
-                </p>
+                <label for="ad">Ad Soyad</label>
+                <input type="text" id="ad" name="name" placeholder="Adınız Soyadınız" required>
 
-                <p>
-                    <label for="email">E-posta Adresi:</label><br>
-                    <input type="email" id="email" name="user_email" placeholder="ornek@mail.com" required>
-                </p>
+                <label for="email">E-posta</label>
+                <input type="email" id="email" name="email" placeholder="ornek@mail.com" required>
 
-                <p>
-                    <label for="konu">Konu:</label><br>
-                    <select id="konu" name="subject">
-                        <option value="genel">Genel Sorular</option>
-                        <option value="is">İş Birliği / Proje</option>
-                        <option value="akademik">Akademik / NLP</option>
-                        <option value="diger">Diğer</option>
-                    </select>
-                </p>
+                <label for="sifre">Başvuru Takip Şifresi</label>
+                <input type="password" id="sifre" name="password" placeholder="Bir şifre belirleyin" required>
 
-                <p>
-                    <label for="mesaj">Mesajınız:</label><br>
-                    <textarea id="mesaj" name="user_message" rows="5" cols="30" placeholder="Mesajınızı buraya yazın..."></textarea>
-                </p>
+                <label for="konu">Konu</label>
+                <select id="konu" name="subject">
+                    <option value="is">İş Teklifi</option>
+                    <option value="soru">Soru</option>
+                    <option value="geri-bildirim">Geri Bildirim</option>
+                </select>
 
-                <button type="submit">Gönder</button>
-                <button type="reset">Temizle</button>
-            </fieldset>
-        </form>
+                <label>İlgi Alanlarınız</label>
+                <div class="checkbox-group">
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="yapay-zeka" name="interest" value="ai">
+                        <label for="yapay-zeka" style="font-weight:normal; margin-bottom:0;">Yapay Zeka / NLP</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="web-dev" name="interest" value="web">
+                        <label for="web-dev" style="font-weight:normal; margin-bottom:0;">Web Geliştirme</label>
+                    </div>
+                    <div class="checkbox-item">
+                        <input type="checkbox" id="veri-bilimi" name="interest" value="data">
+                        <label for="veri-bilimi" style="font-weight:normal; margin-bottom:0;">Veri Bilimi</label>
+                    </div>
+                </div>
 
-        <br>
+                <label for="dosya">Özgeçmiş Yükle (PDF/Word)</label>
+                <input type="file" id="dosya" name="resume">
 
-        <section>
-            <h3>Diğer Kanallar</h3>
-            <ul>
-                <li><strong>E-posta:</strong> <a href="mailto:murattahayavas@gmail.com">murattahayavas@gmail.com</a></li>
-                <li><strong>Konum:</strong> Türkiye</li>
-                <li><strong>Sosyal Medya:</strong> <a href="https://linkedin.com/murattahayavas" target="_blank">LinkedIn</a></li>
-            </ul>
-        </section>
+                <label for="mesaj">Mesaj</label>
+                <textarea id="mesaj" name="message" rows="4" placeholder="Mesajınızı buraya yazın..."></textarea>
+
+                <div class="checkbox-item">
+                    <input type="checkbox" id="kvkk" name="kvkk" required>
+                    <label for="kvkk" style="font-weight:normal; font-size: 14px;">KVKK metnini okudum, onaylıyorum.</label>
+                </div>
+
+                <button type="submit">Başvuruyu Gönder</button>
+            </form>
+        </div>
     </main>
 
     <hr>
 
-    <footer>
+    <footer style="text-align:center;">
         <p>&copy; 2026 Taha - Tüm Hakları Saklıdır.</p>
     </footer>
 
